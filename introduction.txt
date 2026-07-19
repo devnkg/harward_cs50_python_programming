@@ -1,0 +1,115 @@
+Harward CS50'S Instructor - David J. Malan
+
+1 Functions, Variables
+2 Conditionals
+3 Loop
+4 Exceptions
+5 Libraries - pip
+6 Unit Test
+7 File I/O
+8 Regular Expressions
+9 Object-Oriented Programming (Functional Programming)
+10 Et Cektra
+
+
+data types
+str int bool float list
+
+python is program or interpretor
+Argumnets - inputes in function that somhow influence its behaveior
+parameters - arg =  parms | positional parametersand named parameters
+sideeffects - displays on the screen as results or output is sideeffects (Hello World)
+Bug - bug is a mistake in Programming
+command line interface - ofr devlopers 
+grafical user interface - users
+return - function will get the users input and handed back to user
+variables - create a varible stored in computers memory contains some value inside the computer or Program
+= - assignment operator, assign values to variables and change values of Variables 
+comments - # read the better code
+pseudcode - pseudcode return values and variables
++ - concetination in strings
+str - 
+method - is a function built-in to a type of value to functions are ex: f
+intrective mode - python3
+round() - give nearest values
+pow() - 2 * 2
+
+
+                    functions and variables
+def - define a function
+
+main() - def main(): entrypoint. close with main()
+
+scope - 
+
+
+
+
+in-built functions - 
+print() - print the output 
+input() - get inpu from the user  
+
+int - float - / - 
+% - remainder 
+
+
+                conditional - 
+
+>
+>=
+<
+<=
+==
+!=
+if
+elif
+else
+or
+and
+
+bool - True/False
+
+
+match - switch in other langauages
+
+
+                loops - repeate again and again
+    while
+    for - range() 
+    list - representation []
+    dict - representation {}
+    slice - [1:3]
+
+            range(), len(),  continue(), break(), none()
+
+
+            Exceptions
+
+SyntaxErrors() - this error has to be fixed by dev
+ValueError() - 
+NameError() - 
+else
+try/except
+raise
+indexError
+
+
+Libraries - reusabliy of code
+    modules  -     
+        random - choice, randint, shuffle
+    statistics - 
+        mean
+    sys - 
+        argv (argument vector)
+        exit
+    packages - pypi - python package index
+        cowsay - cow , trex
+    APIs - 
+    requests - 
+    JSON - 
+    __name__
+
+
+
+
+        
