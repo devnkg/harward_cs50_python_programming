@@ -80,7 +80,7 @@ match - switch in other langauages
     dict - representation {}
     slice - [1:3]
 
-            range(), len(),  continue(), break(), none()
+            range(), len(),  continue(), break(), none(), sorted()
 
 
             Exceptions
@@ -107,9 +107,28 @@ Libraries - reusabliy of code
     APIs - 
     requests - 
     JSON - 
-    __name__
+    __name__ == __main__
+    pytest
+    CSV - reader(), DickReader()
+    pillow - Image() , open()
+    re (regex) - 
+
+    
 
 
 
+unit test
+    convention or standard - test_function()
+    assert 
+        assertionError
+    pytest
+    packages
 
-        
+
+File I/O
+    file - special veriable
+    Open() - read and write files
+    with - statement 
+
+
+regex      

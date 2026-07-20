@@ -9,17 +9,14 @@
 # print(f"Hello, {name}") # best practice
 
 # #  def - define
-# def main(): 
-#     name = input("what's your name? ")
-#     hello(name)
+def main(): 
+    name = input("what's your name? ")
+    print(hello(name))
 
-# def hello(to="world"):
-#     print("Hello,", to)
+def hello(to="World"):
+    return f"Hello, {to}"
 
-# hello()
-    
-
-
-# main()
+if __name__ == "__main__":
+    main()
 
 

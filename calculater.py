@@ -79,8 +79,10 @@ def main():
     print("x sqaure is", square(x))
 
 # def square(n):
-#     return n * n
+#     return n + n
 
 def square(n):
     return pow(n, 2)
-main()
+
+if __name__ == "__main__":
+    main()
