@@ -13,7 +13,7 @@ Harward CS50'S Instructor - David J. Malan
 
 
 data types
-str int bool float list
+str int bool float list touple(immutable)
 
 python is program or interpretor
 Argumnets - inputes in function that somhow influence its behaveior
@@ -48,6 +48,8 @@ scope -
 in-built functions - 
 print() - print the output 
 input() - get inpu from the user  
+strip() - 
+lower()- 
 
 int - float - / - 
 % - remainder 
@@ -115,8 +117,6 @@ Libraries - reusabliy of code
 
     
 
-
-
 unit test
     convention or standard - test_function()
     assert 
@@ -131,4 +131,21 @@ File I/O
     with - statement 
 
 
-regex      
+regex  
+    re - search(), match(), fullmatch(), sub(), findall() IGNORECASE(), MULTILINE, DOTALL()   
+    :=  - assing a values and ask if or else
+
+
+object Oriented Programming - encapsulation
+    class - allolw you to invent you datatype in python  
+    objects -    instance variables    ----define store --- atributes |
+    methods/function - __init__ (defined inside the class and this function intilize content of object) -self - __new__ (cunstruct the object with new)- constructor -
+            __str__
+    @properties - function or atribute
+    @object.setter - setter function
+    decorator - 
+    staticmethod
+    inheritence
+    encapsulation
+    operator overloading
+    in dictonry we add keys vs in class we are adding varibales to objects or instance variable to object 
