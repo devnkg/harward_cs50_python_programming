@@ -1,175 +1,540 @@
-Harward CS50'S Instructor - David J. Malan
+# HARVARD CS50'S PYTHON PROGRAMMING - COMPLETE COURSE NOTES
 
-1 Functions, Variables
-2 Conditionals
-3 Loop
-4 Exceptions
-5 Libraries - pip
-6 Unit Test
-7 File I/O
-8 Regular Expressions
-9 Object-Oriented Programming (Functional Programming)
-10 Et Cektra
+## Instructor: David J. Malan
 
+================================================================================
+                            COURSE STRUCTURE
+================================================================================
 
-data types
-str int bool float list touple(immutable)
+  Week 0 - Functions, Variables
+  Week 1 - Conditionals
+  Week 2 - Loops
+  Week 3 - Exceptions
+  Week 4 - Libraries & pip
+  Week 5 - Unit Tests
+  Week 6 - File I/O
+  Week 7 - Regular Expressions
+  Week 8 - Object-Oriented Programming (OOP)
+  Week 9 - Et Cetera
 
-python is program or interpretor
-Argumnets - inputes in function that somhow influence its behaveior
-parameters - arg =  parms | positional parametersand named parameters
-sideeffects - displays on the screen as results or output is sideeffects (Hello World)
-Bug - bug is a mistake in Programming
-command line interface - ofr devlopers 
-grafical user interface - users
-return - function will get the users input and handed back to user
-variables - create a varible stored in computers memory contains some value inside the computer or Program
-= - assignment operator, assign values to variables and change values of Variables 
-comments - # read the better code
-pseudcode - pseudcode return values and variables
-+ - concetination in strings
-str - 
-method - is a function built-in to a type of value to functions are ex: f
-intrective mode - python3
-round() - give nearest values
-pow() - 2 * 2
+================================================================================
+                        DATA TYPES IN PYTHON
+================================================================================
 
+  ┌────────────┬──────────────┬──────────────────────────────────────────────┐
+  │   Type     │  Mutable?    │            Example                           │
+  ├────────────┼──────────────┼──────────────────────────────────────────────┤
+  │  str       │  No          │  "hello", 'world'                           │
+  │  int       │  No          │  42, -7, 0                                  │
+  │  float     │  No          │  3.14, -0.5, 1.0                           │
+  │  bool      │  No          │  True, False                                │
+  │  list      │  Yes         │  [1, 2, 3], ["a", "b"]                     │
+  │  tuple     │  No          │  (1, 2, 3), ("x", "y")                     │
+  │  dict      │  Yes         │  {"key": "value"}                          │
+  │  set       │  Yes         │  {1, 2, 3}                                  │
+  │  NoneType  │  N/A         │  None                                       │
+  └────────────┴──────────────┴──────────────────────────────────────────────┘
 
-                    functions and variables
-def - define a function
+================================================================================
+                    KEY TERMINOLOGY
+================================================================================
 
-main() - def main(): entrypoint. close with main()
+  Python        - Programming language / interpreter
+  Arguments     - Inputs to a function that influence its behavior
+  Parameters    - Variables in function definition that receive arguments
+  Side Effects  - Output displayed on screen (e.g., print())
+  Bug           - A mistake in programming
+  CLI           - Command Line Interface (for developers)
+  GUI           - Graphical User Interface (for users)
+  Return        - Function hands a value back to the caller
+  Variables     - Named storage in computer memory
+  =             - Assignment operator (assigns values to variables)
+  Comments      - # Used to write human-readable explanations in code
+  Pseudocode    - Informal high-level description of program logic
+  +             - Concatenation operator (for strings)
+  Method        - A function that belongs to a specific data type
+  Scope         - Where a variable is accessible in code
 
-scope - 
+================================================================================
+                WEEK 0: FUNCTIONS AND VARIABLES
+================================================================================
 
+  KEY FUNCTIONS:
+    print()     - Display output to screen
+    input()     - Get input from user (always returns a string)
+    int()       - Convert string to integer
+    float()     - Convert string to float
+    str()       - Convert value to string
+    round()     - Round a number to nearest integer or specified decimals
+    pow()       - Raise number to a power (e.g., pow(2, 3) = 8)
 
+  STRING METHODS:
+    strip()     - Remove leading/trailing whitespace
+    lower()     - Convert to lowercase
+    upper()     - Convert to uppercase
+    title()     - Capitalize first letter of each word
+    capitalize()- Capitalize first letter only
 
+  BEST PRACTICES:
+    - Use f-strings: f"Hello, {name}"
+    - Always use if __name__ == "__main__": main()
+    - Nest int(input()) for clean code
+    - Use def to create reusable functions
+    - Use default parameters: def hello(to="World")
 
-in-built functions - 
-print() - print the output 
-input() - get inpu from the user  
-strip() - 
-lower()- 
+  FLOAT PRECISION:
+    - round(x + y, 2)     - Round to 2 decimal places
+    - f"{z:.2f}"          - Format to exactly 2 decimal places
 
-int - float - / - 
-% - remainder 
+================================================================================
+                WEEK 1: CONDITIONALS
+================================================================================
 
+  COMPARISON OPERATORS:
+    >   - Greater than
+    >=  - Greater than or equal to
+    <   - Less than
+    <=  - Less than or equal to
+    ==  - Equal to (DON'T confuse with =)
+    !=  - Not equal to
 
-                conditional - 
+  LOGICAL OPERATORS:
+    and   - Both conditions must be True
+    or    - At least one condition must be True
+    not   - Inverts boolean value
 
->
->=
-<
-<=
-==
-!=
-if
-elif
-else
-or
-and
+  CONDITIONAL STATEMENTS:
+    if condition:
+        # Code runs if condition is True
+    elif other_condition:
+        # Code runs if first is False and this is True
+    else:
+        # Code runs if all conditions are False
 
-bool - True/False
+  CHAINED COMPARISONS (Python-specific):
+    90 <= score <= 100    # Instead of: score >= 90 and score <= 100
 
+  MATCH/CASE (Python 3.10+ - Switch Statement):
+    match value:
+        case "A" | "B":   # | means OR
+            # Handle A or B
+        case "C":
+            # Handle C
+        case _:            # _ = default/wildcard
+            # Handle anything else
 
-match - switch in other langauages
+  BEST PRACTICES:
+    - Simplify conditions: if score >= 90 (don't need upper bound in elif chains)
+    - Return boolean directly: return n % 2 == 0 (not if/else returning True/False)
+    - Use match/case for specific values, if/elif for ranges
 
+================================================================================
+                WEEK 2: LOOPS
+================================================================================
 
-                loops - repeate again and again
-    while
-    for - range() 
-    list - representation []
-    dict - representation {}
-    slice - [1:3]
+  WHILE LOOP:
+    while condition:
+        # Code repeats while condition is True
+    - DANGER: Must update condition or you get infinite loop!
+    - Pattern: while True: ... if done: break
 
-            range(), len(),  continue(), break(), none(), sorted()
+  FOR LOOP:
+    for variable in iterable:
+        # Code runs for each item
 
+    Common patterns:
+    - for i in range(n):        # i = 0, 1, 2, ..., n-1
+    - for _ in range(n):        # _ = unused variable
+    - for item in list:         # Iterate over list elements
+    - for key in dict:          # Iterate over dictionary keys
+    - for i, item in enumerate(list):  # Get index AND value
 
-            Exceptions
+  RANGE FUNCTION:
+    range(stop)           - 0 to stop-1
+    range(start, stop)    - start to stop-1
+    range(start, stop, step) - start to stop-1, increment by step
 
-SyntaxErrors() - this error has to be fixed by dev
-ValueError() - 
-NameError() - 
-else
-try/except
-raise
-indexError
-UnboundLocalError
+  LIST METHODS:
+    list.append(item)     - Add item to end
+    list.sort()           - Sort in place
+    sorted(list)          - Return new sorted list
+    len(list)             - Number of elements
+    list[1:3]             - Slice (index 1 to 2)
 
+  DICTIONARY METHODS:
+    dict.keys()           - All keys
+    dict.values()         - All values
+    dict.items()          - All key-value pairs as tuples
+    dict.get(key, default) - Safe access with default
 
-Libraries - reusabliy of code
-    modules  -     
-        random - choice, randint, shuffle
-    statistics - 
-        mean
-    sys - 
-        argv (argument vector)
-        exit
-    packages - pypi - python package index
-        cowsay - cow , trex
-    APIs - 
-    requests - 
-    JSON - 
-    __name__ == __main__
-    pytest
-    CSV - reader(), DickReader()
-    pillow - Image() , open()
-    re (regex) - 
+  BEST PRACTICES:
+    - Use for instead of while when possible (safer)
+    - Use _ for unused loop variables
+    - String multiplication: "#" * 3 = "###"
+    - print() without args = newline
 
-    
+================================================================================
+                WEEK 3: EXCEPTIONS
+================================================================================
 
-unit test
-    convention or standard - test_function()
-    assert 
-        assertionError
-    pytest
-    packages
+  COMMON EXCEPTIONS:
+    ValueError()     - Wrong value type (e.g., int("cat"))
+    TypeError()      - Wrong operation on type
+    NameError()      - Variable not defined
+    IndexError()      - List index out of range
+    SyntaxError()    - Invalid Python syntax
+    UnboundLocalError() - Local variable referenced before assignment
 
+  TRY/EXCEPT PATTERN:
+    try:
+        # Risky code
+    except ValueError:
+        # Handle specific error
+    except (TypeError, ValueError):  # Handle multiple errors
+        # Handle either error
+    except:  # NOT RECOMMENDED (catches everything)
+        # Handle any error
+    else:
+        # Runs ONLY if try succeeded
+    finally:
+        # ALWAYS runs (even if error)
 
-File I/O
-    file - special veriable
-    Open() - read and write files
-    with - statement 
+  VALIDATION PATTERN (Best Practice):
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            pass    # Silently retry
 
+  KEYWORDS:
+    raise           - Manually trigger an exception
+    pass            - Do nothing (placeholder)
+    break           - Exit loop
+    return          - Exit function (and loop)
 
-regex  
-    re - search(), match(), fullmatch(), sub(), findall() IGNORECASE(), MULTILINE, DOTALL()   
-    :=  - assing a values and ask if or else
+================================================================================
+                WEEK 4: LIBRARIES
+================================================================================
 
+  IMPORTING MODULES:
+    import module_name
+    from module_name import function_name
+    from module_name import function1, function2
 
-object Oriented Programming - encapsulation
-    class - allolw you to invent you datatype in python  
-    objects -    instance variables    ----define store --- atributes |
-    methods/function - __init__ (defined inside the class and this function intilize content of object) -self - __new__ (cunstruct the object with new)- constructor -
-            __str__
-    @properties - function or atribute
-    @object.setter - setter function
-    decorator - 
-    staticmethod
-    inheritence
-    encapsulation
-    operator overloading
-    in dictonry we add keys vs in class we are adding varibales to objects or instance variable to object 
+  STANDARD LIBRARY MODULES:
+    random:
+      - choice(list)    - Random element from list
+      - randint(a, b)   - Random integer between a and b
+      - shuffle(list)   - Randomly reorder list
 
+    statistics:
+      - mean(list)      - Average
+      - median(list)    - Middle value
+      - mode(list)      - Most frequent value
 
+    sys:
+      - sys.argv        - Command-line arguments (list)
+      - sys.exit()      - Exit program
 
-et cekctra
+  THIRD-PARTY PACKAGES (PyPI):
+    Install: pip install package_name
+    Examples:
+      - cowsay          - Fun ASCII art
+      - requests        - HTTP requests (APIs)
+      - Pillow/PIL      - Image processing
 
-    set data type- 
-    global varibale - 
-    constant - 
-    type hint
-    mypy - check errors 
-    docstring - 
-    argparse - 
-    unpacking - * for list , ** for dictonerys
-    *args
-    **kwargs
-    map
-    list comprehension
-    filter
-    dictionary comprehension
-    enumerate
-    generator
-    yield
-    iterator
+  if __name__ == "__main__":
+    - When run directly: __name__ = "__main__"
+    - When imported: __name__ = module_name
+    - ALWAYS use this guard for reusable modules
+
+================================================================================
+                WEEK 5: UNIT TESTS
+================================================================================
+
+  ASSERT STATEMENT:
+    assert condition              # Raises AssertionError if False
+    assert condition, "message"   # With custom error message
+
+  PYTEST FRAMEWORK:
+    Install: pip install pytest
+    Run: pytest test_file.py
+    Run all: pytest
+
+  TEST CONVENTIONS:
+    - File: test_example.py or in tests/ folder
+    - Function: def test_function_name():
+    - Uses assert to verify expected behavior
+
+  TESTING PATTERNS:
+    def test_positive():
+        assert function(2) == 4
+
+    def test_edge_case():
+        assert function(0) == 0
+
+    def test_error():
+        with pytest.raises(TypeError):
+            function("invalid")
+
+  BEST PRACTICES:
+    - Test edge cases (0, negative, empty)
+    - Test error cases
+    - One assertion per test (or related assertions)
+    - Descriptive test function names
+
+================================================================================
+                WEEK 6: FILE I/O
+================================================================================
+
+  FILE MODES:
+    "r"   - Read (default)
+    "w"   - Write (overwrites existing file)
+    "a"   - Append (adds to end of file)
+    "r+"  - Read and write
+
+  WITH STATEMENT (Best Practice):
+    with open("filename.txt", "r") as file:
+        content = file.read()
+    # File automatically closed
+
+  READING FILES:
+    file.read()           - Entire file as string
+    file.readlines()      - List of lines
+    for line in file:     - Iterate line by line (memory efficient)
+    line.rstrip()         - Remove trailing newline/whitespace
+
+  WRITING FILES:
+    file.write("text\n")  - Write string (add \n for new line)
+    file.writelines(list) - Write list of strings
+
+  CSV HANDLING:
+    import csv
+    reader = csv.reader(file)       # Returns lists
+    reader = csv.DictReader(file)   # Returns dicts (first row = headers)
+    writer = csv.DictWriter(file, fieldnames=["col1", "col2"])
+    writer.writeheader()
+    writer.writerow({"col1": "val1", "col2": "val2"})
+
+================================================================================
+                WEEK 7: REGULAR EXPRESSIONS
+================================================================================
+
+  IMPORT: import re
+
+  COMMON FUNCTIONS:
+    re.search(pattern, string)      - Find pattern anywhere in string
+    re.match(pattern, string)       - Match from start of string
+    re.fullmatch(pattern, string)   - Match entire string
+    re.findall(pattern, string)     - Find all occurrences
+    re.sub(pattern, replace, string)- Replace matches
+
+  REGEX SYNTAX:
+    ^           - Start of string
+    $           - End of string
+    .           - Any character except newline
+    \.          - Literal dot
+    \w          - Word character [a-zA-Z0-9_]
+    \d          - Digit [0-9]
+    \s          - Whitespace (space, tab, newline)
+    +           - One or more
+    *           - Zero or more
+    ?           - Zero or one (optional)
+    {3}         - Exactly 3
+    {2,4}       - Between 2 and 4
+    [abc]       - Character class: a, b, or c
+    [a-z]       - Range: any lowercase letter
+    (pattern)   - Capturing group
+    (?:pattern) - Non-capturing group
+    pattern1|pattern2 - OR
+
+  FLAGS:
+    re.IGNORECASE   - Case-insensitive matching
+    re.MULTILINE    - ^ and $ match each line
+    re.DOTALL       - . matches newlines too
+
+  WALRUS OPERATOR (:=):
+    if matches := re.search(pattern, string):
+        # matches is available here!
+
+    - Assigns value AND checks truthiness in one step
+    - Only works in expressions (if, while, etc.)
+
+  BEST PRACTICES:
+    - Use raw strings r"pattern" for regex
+    - Use ^ and $ anchors for full validation
+    - Use non-capturing groups (?:) when you don't need the value
+    - Escape dots with \. for literal dots in URLs/emails
+
+================================================================================
+        WEEK 8: OBJECT-ORIENTED PROGRAMMING (OOP)
+================================================================================
+
+  CLASS BASICS:
+    class ClassName:
+        def __init__(self, param1, param2):
+            self.attr1 = param1
+            self.attr2 = param2
+
+        def __str__(self):
+            return f"{self.attr1} - {self.attr2}"
+
+  KEY CONCEPTS:
+    __init__      - Constructor (initializes new objects)
+    self          - Reference to the current instance (like "this")
+    __str__       - String representation (used by print())
+    __repr__      - Developer representation (used by debugger)
+
+  DECORATORS:
+    @property       - Getter: method looks like attribute
+    @name.setter    - Setter: runs validation on assignment
+    @classmethod    - Method on class, not instance (cls instead of self)
+    @staticmethod   - Method that doesn't need class or instance
+
+  ENCAPSULATION:
+    _variable     - "Protected" by convention (internal use)
+    __variable    - Name mangling (more private)
+    @property     - Controlled access to internal data
+
+  INHERITANCE:
+    class Child(Parent):
+        def __init__(self, param1, param2, param3):
+            super().__init__(param1, param2)
+            self.attr3 = param3
+
+    - Child inherits all methods from Parent
+    - super() calls parent class methods
+    - Can override parent methods
+
+================================================================================
+                WEEK 9: ET CETERA (ADVANCED TOPICS)
+================================================================================
+
+  SET DATA TYPE:
+    set = {1, 2, 3}           - Unordered, unique values
+    set.add(4)                - Add element
+    set.remove(4)             - Remove element
+    set1 | set2               - Union
+    set1 & set2               - Intersection
+
+  GLOBAL VARIABLES:
+    global x                  - Declare x as global (use sparingly!)
+
+  CONSTANTS (Convention):
+    PI = 3.14159              - UPPERCASE = constant (by convention)
+
+  TYPE HINTS:
+    def func(x: int, y: str) -> bool:
+        return True
+
+    from typing import List, Dict, Optional
+    def func(items: List[int], data: Dict[str, str]) -> Optional[str]:
+
+    Mypy: python3 -m mypy file.py (checks type correctness)
+
+  DOCSTRINGS:
+    def func():
+        """Description of function.
+        
+        Args:
+            param1: Description
+            
+        Returns:
+            Description of return value
+        """
+
+  ARGPARSE (Advanced CLI):
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-n", "--name", required=True)
+    args = parser.parse_args()
+    print(args.name)
+
+  UNPACKING:
+    *list         - Unpack list elements
+    **dict        - Unpack dictionary key-value pairs
+
+    def func(a, b, c): ...
+    args = [1, 2, 3]
+    func(*args)              # Same as: func(1, 2, 3)
+
+    kwargs = {"a": 1, "b": 2}
+    func(**kwargs)           # Same as: func(a=1, b=2)
+
+  VARIABLE ARGUMENTS:
+    def func(*args):         # Takes any number of positional arguments
+        for arg in args:     # args is a tuple
+            print(arg)
+
+    def func(**kwargs):      # Takes any number of keyword arguments
+        for key, value in kwargs.items():  # kwargs is a dict
+            print(f"{key}={value}")
+
+  LIST COMPREHENSION:
+    [x**2 for x in range(10)]                    # Squares
+    [x for x in range(10) if x % 2 == 0]         # Even numbers only
+    [(x, y) for x in [1,2] for y in [3,4]]       # Nested loops
+
+  DICTIONARY COMPREHENSION:
+    {x: x**2 for x in range(5)}   # {0:0, 1:1, 2:4, 3:9, 4:16}
+
+  MAP & FILTER:
+    list(map(str, [1, 2, 3]))           # ['1', '2', '3']
+    list(filter(lambda x: x > 0, [-1, 0, 1]))  # [1]
+    list(map(lambda x: x**2, [1, 2, 3]))       # [1, 4, 9]
+
+  LAMBDA FUNCTIONS:
+    lambda x: x * 2                   # Anonymous function
+    sorted(list, key=lambda x: x[1])  # Sort by second element
+
+  ENUMERATE:
+    for i, value in enumerate(["a", "b", "c"]):
+        print(i, value)               # 0 a, 1 b, 2 c
+
+  GENERATORS & YIELD:
+    def count_up_to(n):
+        i = 1
+        while i <= n:
+            yield i
+            i += 1
+
+    for num in count_up_to(5):         # Memory efficient!
+        print(num)
+
+    - yield returns a value but PAUSES the function
+    - Next call resumes from where it paused
+    - Generators are MEMORY EFFICIENT for large sequences
+
+  ITERATOR:
+    An object that can be iterated upon
+    Must implement __iter__() and __next__()
+    for loops work by calling next() until StopIteration
+
+================================================================================
+                        FINAL TIPS
+================================================================================
+
+  DEBUGGING:
+    - print() variables to see their values
+    - Use Python Tutor (pythontutor.com) for step-by-step visualization
+    - Read error messages carefully (line number, error type)
+    - Use try/except to catch and understand errors
+
+  CODE QUALITY:
+    - Use meaningful variable names
+    - Write comments for WHY, not WHAT (code shows what)
+    - Keep functions small (one task per function)
+    - Use type hints for better readability
+    - Always add docstrings to functions
+    - Follow PEP 8 style guide
+
+  RESOURCES:
+    - CS50's Python: cs50.harvard.edu/python
+    - Python Docs: docs.python.org
+    - PyPI Packages: pypi.org
+    - PEP 8 Style Guide: pep8.org
+
+================================================================================
+                    END OF COURSE NOTES
+================================================================================
+

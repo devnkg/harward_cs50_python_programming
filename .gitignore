@@ -1,0 +1,40 @@
+# 🐍 Python Bytecode & Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# 📦 Virtual Environment
+venv/
+.venv/
+env/
+.env/
+
+# 🖼️ Generated Media
+*.gif
+costume.gif
+
+# ⚙️ IDE & Editor Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# 📋 Testing & Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# 📦 Distribution / Build
+dist/
+build/
+*.egg-info/
+
+# 🔑 Environment & Secrets
+.env
+*.env.local
+
