@@ -94,6 +94,7 @@ else
 try/except
 raise
 indexError
+UnboundLocalError
 
 
 Libraries - reusabliy of code
@@ -149,3 +150,26 @@ object Oriented Programming - encapsulation
     encapsulation
     operator overloading
     in dictonry we add keys vs in class we are adding varibales to objects or instance variable to object 
+
+
+
+et cekctra
+
+    set data type- 
+    global varibale - 
+    constant - 
+    type hint
+    mypy - check errors 
+    docstring - 
+    argparse - 
+    unpacking - * for list , ** for dictonerys
+    *args
+    **kwargs
+    map
+    list comprehension
+    filter
+    dictionary comprehension
+    enumerate
+    generator
+    yield
+    iterator
