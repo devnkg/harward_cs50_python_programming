@@ -678,15 +678,6 @@ Install: `pip install -r requirements.txt`
 
 ---
 
-## 🐛 Known Fixes Applied
-
-| File | Issue | Fix |
-|------|-------|-----|
-| `costumes.py` | `image[0]` → should be `images[0]` (list variable name) | Fixed variable name |
-| `validate.py` | `("Invalid")` → should be `print("Invalid")` | Added missing `print()` |
-
----
-
 ## 📝 License
 
 This repository contains personal learning notes from Harvard's CS50 course.  
